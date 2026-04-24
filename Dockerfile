@@ -21,6 +21,7 @@ FROM eclipse-temurin:21-jre
 WORKDIR /app
 
 COPY --from=backend-build /app/target/expense-tracker-1.0.0.jar app.jar
+COPY --from=backend-build /app/dist ./dist
 
 EXPOSE 10000
 ENTRYPOINT ["java", "-Dserver.port=10000", "-jar", "/app/app.jar"]
