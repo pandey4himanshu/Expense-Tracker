@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: fenmo-expense-tracker
+    env: java
+    plan: free
+    buildCommand: npm install && npm run build && mvn package
+    startCommand: java -jar target/expense-tracker-1.0.0.jar
