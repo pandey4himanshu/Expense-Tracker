@@ -1,0 +1,27 @@
+{
+  "name": "fenmo-expense-tracker",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently \"npm:dev:server\" \"npm:dev:client\"",
+    "dev:server": "mvn spring-boot:run",
+    "dev:client": "vite",
+    "build": "vite build",
+    "build:full": "npm run build && mvn package",
+    "start": "mvn spring-boot:run",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.4.1",
+    "concurrently": "^9.1.2",
+    "supertest": "^7.1.0",
+    "vite": "^6.2.0",
+    "vitest": "^3.0.8"
+  }
+}
